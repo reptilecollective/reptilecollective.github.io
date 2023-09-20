@@ -166,7 +166,7 @@ button:focus-visible,
     position: fixed;
     z-index: 10;
 
-    transition: opacity 0.1s ease, transform 0.1s ease;
+    transition: opacity 0.3s ease, transform 0.2s ease;
 }
 #nav.hidden:not(:focus-within) { pointer-events: none; opacity: 0; transform: translateY(-100%); }
 #nav #logo {
@@ -186,8 +186,8 @@ button:focus-visible,
 #landing {
     /* background-color: var(--accent); */
     /* box-shadow: 0 0 12px rgba(0, 0, 0, 0.4); */
-    /* padding: 144px 0 200px; */
-    min-height: 90vh;
+    padding: 72px 0;
+    min-height: 85vh;
     position: relative;
 
     background: rgb(20, 20, 20);
@@ -197,7 +197,7 @@ button:focus-visible,
     background-position: right center;
 }
 #landing .column {
-    /* width: 100%; */
+    width: 100%;
     margin: 0 8px;
 }
 /* #landing .header_inner {
@@ -206,8 +206,13 @@ button:focus-visible,
 .logo_col {
     max-width: 480px;
 }
+.logo_col img { width: 100%; }
+#landing .image_col {
+    max-width: 480px;
+}
 
 /* Call To Action */
+#call_to_action { margin-bottom: 12px; }
 .cta {
     /* --accent: #ca2b2b; */
     border-radius: 50px;
@@ -227,19 +232,20 @@ button:focus-visible,
 
 /* Carousel */
 #landing .carousel {
-    /* outline: 1px solid blue; */
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 
     position: relative;
 }
 #landing .carousel .carousel_images {
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    width: 100%;
+    /* position: relative; */
 }
 #landing .carousel .carousel_images { -ms-overflow-style: none; scrollbar-width: none; }
 #landing .carousel .carousel_images::-webkit-scrollbar { display: none;  }
-#landing .carousel img {
+#landing .carousel .carousel_images img{
     width: 100%;
     object-fit: contain;
     scroll-snap-align: start;
@@ -398,6 +404,8 @@ main .body_col {
     width: 100%;
     min-width: 350px;
     padding: 18px 32px;
+
+    margin-top: 20px;
 }
 main .bio_image {
     width: 140px;
@@ -437,7 +445,7 @@ main p {
 
 
 /* Desktop layout */
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 850px) {
     .media_flex {
         flex-direction: row;
     }
@@ -445,4 +453,8 @@ main p {
         max-width: 320px;
         margin-right: 18px;
     }
+    #landing .image_col {
+        max-width: unset;
+    }
+    main .body_col { margin-top: unset; }
 }
