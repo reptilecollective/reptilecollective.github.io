@@ -6,6 +6,11 @@ const nav = document.getElementById("nav");
 const carousel_container = document.getElementById("carousel_images");
 nav.classList.add('hidden');
 
+// Return to top
+function toTop() {
+    window.scrollTo({top:0, behavior:'smooth'});
+}
+
 /** Carousel */
 document.querySelectorAll('[data-carousel]').forEach(container => {
     let images = container.querySelector(".carousel_images");
@@ -33,7 +38,6 @@ document.querySelectorAll('[data-carousel]').forEach(container => {
     // Dots
     allDots.forEach(e => {
         image_count++;
-        console.log('dot');
 
         e.addEventListener('click', event => {
             let index = event.srcElement.dataset.index;
@@ -41,23 +45,29 @@ document.querySelectorAll('[data-carousel]').forEach(container => {
         })
     });
 
+    /** Set auto timer */
+    function setTimer() {
+        if(!container.dataset.timer) return;
+        clearInterval(timer);
+        timer = setInterval(() => {cycleImage(undefined, true);}, Number(container.dataset.timer));
+    }
+
     /** Cycles to next or previous image */
-    function cycleImage(e) {
-        let dir = Number(e?.srcElement.dataset?.direction) ?? 1;
-        console.log(dir);
+    function cycleImage(event, auto) {
+        let dir = Number(event?.srcElement.dataset?.direction) || 1;
         let end = image_count*images.offsetWidth-images.offsetWidth;
         let at_end = images.scrollLeft >= end && dir === 1; // Start over when at the end
         let at_start = images.scrollLeft === 0 && dir === -1; // Skip to end when at the start
-        console.log(images.scrollLeft, end, at_end, at_start);
         let x = at_start ? end : at_end ? 0 : images.scrollLeft + images.offsetWidth*dir;
         imgScroll(x);
+        if(!auto) setTimer(); // Reset timer
     }
 
     // Buttons
     container.querySelectorAll(".arrow").forEach(e => e.addEventListener('click', cycleImage));
 
     // Auto
-    if(container.dataset.timer) timer = setInterval(() => {cycleImage();}, Number(container.dataset.timer));
+    setTimer();
 })
 
 /** Update Nav Bar onscroll */
