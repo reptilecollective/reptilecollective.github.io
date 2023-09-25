@@ -400,6 +400,7 @@ main .info_col {
 
 
 #instagram_embed {
+    min-height: 372px;
     margin-top: 32px;
 }
 /* Right column */

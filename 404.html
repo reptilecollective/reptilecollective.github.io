@@ -3,9 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404 - Reptile Collective</title>
+    <title>Reptile Collective - 404</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+
+    <!-- Description -->
+    <meta name="description" content="404 - Page not found">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/styles/styles.css">
+    <style>
+        h1 {
+            font-size: 30pt;
+            border-bottom: 1px solid var(--day-border-color);
+            width: 100%;
+            margin: 0 !important;
+            display: unset !important;
+        }
+        #landing {
+            min-height: 50vh;
+        }
+        #landing * {
+            text-align: center !important;
+            min-width: 300px;
+        }
+        .header_inner {
+            max-width: 500px;
+            margin: unset;
+        }
+        #landing .logo_col { margin:0; max-width: 1000px; width: 100%; }
+    </style>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=DM+Sans:opsz,wght@9..40,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body>
-    404 page not found
+    
+    <!-- Header -->
+    <header id="landing" class="flex justify_center">
+        <div class="header_inner container">
+            <!-- Logo -->
+            <div class="column logo_col flex" style="flex-direction: column;">
+                <h1>404</h1>
+                <p>Page not found</p>
+                <a href="/" target="_blank" rel="noreferrer" class="cta button" style="--accent: transparent;">
+                    <div class="button_inner" style="border-color: white;">
+                        Return to home
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer_inner container">
+            <!-- Columns -->
+            <div class="flex media_flex">
+                <div class="column">
+                    <p>
+                        <h6 class="emphasize">Navigation</h6>
+                        <a href="/">Home</a><br/>
+                        <a href="/#social">Follow us</a><br/>
+                        <a href="/#about">About</a>
+                    </p>
+
+                    <a role="button" tabindex="0" onclick="toTop()">Return to top</a>
+                </div>
+                <div class="column">
+                    <p>
+                        <h6 class="emphasize">Follow Us</h6>
+                        <div class="social_buttons flex">
+                            <a href="https://facebook.com/people/ReptileCollective/100086220939462/" target="_blank" rel="noreferrer" class="button" style="--accent: var(--facebook)" title="Reptile Collective on Facebook">
+                                <img src="/assets/icon/f_logo_RGB-Blue_58.png" alt="Facebook">
+                            </a>
+        
+                            <a href="https://www.instagram.com/reptile_collective/" target="_blank" rel="noreferrer" class="button" style="--accent: var(--instagram)" title="Reptile Collective on Instagram">
+                                <img src="/assets/icon/Instagram_color.png" alt="Instagram" class="hover_invert">
+                            </a>
+        
+                            <a href="https://www.youtube.com/channel/UCEkrhnxZgC__91VliMUaLcA" target="_blank" rel="noreferrer" class="button" style="--accent: var(--youtube)" title="Reptile Collective on Youtube">
+                                <img src="/assets/icon/Youtube.png" alt="Youtube" class="hover_invert">
+                            </a>
+        
+                            <a href="https://www.tiktok.com/@reptile_collective" target="_blank" rel="noreferrer" class="button" style="--accent: var(--tiktok-gradient)" title="Reptile Collective on TikTok">
+                                <img src="/assets/icon/tiktok.png" alt="TikTok">
+                            </a>
+                        </div>
+                    </p>
+                    <!-- <a href="https://www.morphmarket.com/stores/rcollective/" target="_blank" rel="noreferrer" class="cta button">
+                        <div class="button_inner">
+                            Find us on Morph Market
+                        </div>
+                    </a> -->
+                </div>
+                <div class="column">
+                    <p>
+                        <h6 class="emphasize">Attribution</h6>
+                        Fonts via Google fonts
+                    </p>
+                </div>
+            </div>
+
+            <p class="emphasize">© All rights reserved</p>
+        </div>
+    </footer>
 </body>
 </html>
