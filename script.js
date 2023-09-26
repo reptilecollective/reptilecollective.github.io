@@ -13,7 +13,7 @@ function toTop() {
 
 /** Carousel */
 document.querySelectorAll('[data-carousel]').forEach(container => {
-    let images = container.querySelector(".carousel_images");
+    let images = container.querySelector(".carousel_images_container");
     let allDots = container.querySelectorAll('.dot');
     let image_count = 0;
     let timer;
