@@ -5,24 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reptile Collective</title>
     <link rel="icon" type="image/x-icon" href="/assets/favicon.png">
+
+    <!-- Description -->
     <meta name="description" content="At Reptile Collective we breed and sell only quality CB reptiles produced here at our facility or by one of our approved hand selected breeders. Specializing in ball pythons, Kenyan sand boas, king snakes, corn snakes, Blood and short tailed pythons, Dumeril's Boas, BCI, Tri Colored Hognose, Western Hognose, and Rat snake morphs.">
     <meta name="keywords" content="Reptile Collective, reptiles for sale, snakes for sale, pet reptiles, pet snakes, reptiles, ball pythons, corn snakes, sand boas">
     <meta property="og:url" content="https://reptilecollective.com/" />
     <meta property="og:image" content="https://reptilecollective.com/img/carousel-item-1.webp" />
+
+    <!-- Social meta -->
     <meta name="twitter:image" content="https://reptilecollective.com/img/carousel-item-1.webp">
     <meta name="twitter:card" content="summary_large_image">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/assets/styles/styles.css">
+
+    <!-- JS -->
     <script src="script.js" defer></script>
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=DM+Sans:opsz,wght@9..40,700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Facebook -->
+    <!-- <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="u3ozAhsH"></script> -->
+
     <noscript>
         <style>
-            #nav.hidden { pointer-events: unset !important; opacity: unset !important; transform: unset !important; }
+            #nav.hidden { pointer-events: unset !important; opacity: unset !important; transform: translateX(-50%) !important; }
+            .dot { visibility: hidden;}
         </style>
     </noscript>
+
+    <!-- NAV BAR -->
     <header id="nav" class="hidden">
         <div class="container flex justify_center media_flex">
             <a href="/" class="flex justify_center">
@@ -36,30 +53,42 @@
             </a>
         </div>
     </header>
+
+    <!-- Header -->
     <header id="landing" class="flex justify_center">
-        <div id="background_image" style="background: linear-gradient(0deg, rgb(20, 11, 11) 0%, rgba(5, 5, 5, 0.8) 100%), url(./img/carousel-item-1.webp)"></div>
+        <div id="background_image" style="background: linear-gradient(0deg, rgb(20, 11, 11) 0%, rgba(5, 5, 5, 0.8) 100%), url(&quot;assets/reptile_egg_incubation.jpg&quot;);"></div>
         <div class="header_inner container">
             <div class="flex media_flex justify_center">
+                <!-- Logo -->
                 <div class="column logo_col">
+
+                    <!-- Logo -->
                     <div class="flex">
                         <img src="/assets/logo_large_transparent.png" alt="Reptile Collective" class="landing_logo">
                         <h1 class="rc_title">Reptile Collective</h1>
                     </div>
+
+                    <!-- Tagline -->
                     <p class="tagline">
                         At Reptile Collective we breed and sell only quality CB reptiles produced here at our facility or by one of our approved hand selected breeders. Specializing in ball pythons, Kenyan sand boas, king snakes, corn snakes, Blood and short tailed pythons, Dumeril's Boas, BCI, Tri Colored Hognose, Western Hognose, and Rat snake morphs.
                     </p>
+
+                    <!-- Call To Action -->
                     <a href="https://www.morphmarket.com/stores/rcollective/" target="_blank" rel="noopener noreferrer" id="call_to_action" class="cta button">
                         <div class="button_inner">
                             Find us on Morph Market
                         </div>
                     </a>
                 </div>
+
+                <!-- Images -->
                 <div class="column image_col">
                     <div class="carousel" id="main_carousel" data-carousel data-timer="7000">
-                        <div class="carousel_images_container">
-                            <div id="carousel_images" class="carousel_images flex">
-                                
-                                <div class="book_container flex justify_center" data-image="0">
+                        <!-- Images -->
+                        <div class="scrollable">
+                            <div class="images flex">
+                                <!-- Book -->
+                                <div class="item book_container flex justify_center" data-image="0">
                                     <iframe type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="250" height="418" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B07L7GNDTJ&preview=newtab&linkCode=kpe&hideShare=true" ></iframe>
                                 </div>
                                 <img src="/img/carousel-item-1.webp" alt="" data-image="1">
@@ -69,21 +98,29 @@
                                 <img src="/img/carousel-item-5.webp" alt="" data-image="5">
                             </div>
                         </div>
+
+                        <!-- Buttons -->
                         <p role="button" tabindex="0" class="arrow prev" data-direction="-1">Previous</p>
                         <p role="button" tabindex="0" class="arrow next" data-direction="1">Next</p>
+                        <!-- <img src="/assets/arrow.png" alt="Previous image" role="button" tabindex="0" class="arrow prev" data-direction="-1"> -->
+                        <!-- <img src="/assets/arrow.png" alt="Next image" role="button" tabindex="0" class="arrow next" data-direction="1"> -->
+
+                        <!-- Indicators -->
                         <div class="indicators flex justify_center">
-                            <div class="dot active" role="button" tabindex="0" data-index="0"></div>
-                            <div class="dot" role="button" tabindex="0" data-index="1"></div>
-                            <div class="dot" role="button" tabindex="0" data-index="2"></div>
-                            <div class="dot" role="button" tabindex="0" data-index="3"></div>
-                            <div class="dot" role="button" tabindex="0" data-index="4"></div>
-                            <div class="dot" role="button" tabindex="0" data-index="5"></div>
+                            <div class="dot active" role="button" tabindex="0"></div>
+                            <div class="dot" role="button" tabindex="0"></div>
+                            <div class="dot" role="button" tabindex="0"></div>
+                            <div class="dot" role="button" tabindex="0"></div>
+                            <div class="dot" role="button" tabindex="0"></div>
+                            <div class="dot" role="button" tabindex="0"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
+    <!-- Main -->
     <main>
         <div class="main_inner container flex media_flex">
             <div class="column info_col" id="social">
@@ -96,61 +133,86 @@
                             <p class="alt_text">On Facebook</p>
                         </div>
                     </a>
+
                     <a href="https://www.instagram.com/reptile_collective/" target="_blank" rel="noopener noreferrer" class="button" style="--accent: var(--instagram)" title="Reptile Collective on Instagram">
                         <img src="/assets/icon/Instagram_color.png" alt="Instagram" class="hover_invert">
                         <div>
                             <p>@reptile_collective</p>
-                            
+                            <!-- <p class="alt_text">On Instagram</p> -->
                         </div>
                     </a>
+
                     <a href="https://www.youtube.com/channel/UCEkrhnxZgC__91VliMUaLcA" target="_blank" rel="noopener noreferrer" class="button" style="--accent: var(--youtube)" title="Reptile Collective on Youtube">
                         <img src="/assets/icon/Youtube.png" alt="Youtube" class="hover_invert">
                         <div>
                             <p>Reptile Collective</p>
-                            
+                            <!-- <p class="alt_text">On Youtube</p> -->
                         </div>
                     </a>
+
                     <a href="https://www.tiktok.com/@reptile_collective" target="_blank" rel="noopener noreferrer" class="button" style="--accent: var(--tiktok-gradient)" title="Reptile Collective on TikTok">
                         <img src="/assets/icon/tiktok.png" alt="TikTok">
                         <div>
                             <p>@reptile_collective</p>
-                            
+                            <!-- <p class="alt_text">On TikTok</p> -->
                         </div>
                     </a>
                 </div>
+
+                <!-- <div id="facebook_container" class="fb-page" data-href="https://www.facebook.com/ReptileCollective" data-tabs="timeline" data-width="500" data-height="500" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/ReptileCollective" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/ReptileCollective">Reptile Collective</a></blockquote></div> -->
+
                 <div id="instagram_embed">
                     <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reptile_collective/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reptile_collective/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this profile on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reptile_collective/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank">Reptile Collective</a> (@<a href="https://www.instagram.com/reptile_collective/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank">reptile_collective</a>) • Instagram photos and videos</p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
                 </div>
             </div>
             <div class="column body_col" id="about">
+                <!-- Main -->
                 <section>
+                    <!-- About -->
                     <h2>About</h2>
+                    <!-- Bio card -->
+                    <!-- <div class="flex justify_center">
+                        <img src="./assets/placeholder.png" alt="placeholder" class="bio_image">
+                        <p>
+                            This blurb will need updated text. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta et eum laboriosam excepturi explicabo, est ipsa ab ex illo quae!
+                        </p>
+                    </div> -->
                     <div class="about_content flex">
                         <p>
-                            Here at Reptile Collective we truly are a family owned and operated business. We strive to provide only the healthiest top quality reptiles. Whether this is your first reptile or your hundred and first we stand behind our animals and products to help provide only the highest level of customer service and satisfaction. We produce 90% of our available animals at our facility in Smyrna TN, but also surround ourselves with quality top breeders who provide some of the species we do not produce regularly. These members of the Collective are vetted thouroughly to insure animals the we can put our brand behind.  Please contact us for information about currently available , search our MorphMarket animals, or come out to one of the many Reptile and Exotic animal shows that we attend monthly.
+                            Here at Reptile Collective, we truly are a family-owned and operated business. We strive to provide only the healthiest, top quality reptiles. Whether this is your first reptile or your hundred and first, we stand behind our animals and products to help provide only the highest level of customer service and satisfaction. We produce 90% of our available animals at our facility in Smyrna TN, but also surround ourselves with quality, top breeders who provide some of the species we do not produce regularly. These members of the Collective are vetted thoroughly to ensure animals that we can put our brand behind.  Please contact us for information about currently available animals, search our <a href="https://www.morphmarket.com/stores/rcollective/" target="_blank" rel="noopener noreferrer">MorphMarket</a>, or come out to one of the many Reptile and Exotic animal shows that we attend monthly.
                         </p>
                     </div>
+
                 </section>
+
+                <!-- Third-party links -->
                 <section id="third_parties">
                     <h2>More</h2>
                     <div class="tp_links flex">
                         <a href="https://showmereptileshow.com/" title="Show Me Reptiles Show - https://showmereptileshow.com/" class="party">
                             <img src="/assets/show-me-reptiles-logo.webp" alt="Show Me Reptiles Show" style="min-height: 114px;" loading="lazy">
+                            <!-- <p>Show Me Reptiles Show</p> -->
                         </a>
 
                         <a href="http://nashvilleexoticpet.com/home-5/" title="Nashville Exotic Pet Expo - http://nashvilleexoticpet.com/home-5/" class="party">
                             <img src="/assets/NashvilleExoticPetExpo_Horz3_black.png" alt="Nashville Exotic Pet Expo" loading="lazy">
+                            <!-- <p>Nashville Exotic Pet Expo</p> -->
                         </a>
+
                         <a href="https://usark.org/" target="_blank" rel="noopener noreferrer" title="USARK Silver Member - https://usark.org/" class="party">
                             <img src="/assets/usark_silver-01-300x131.jpg" alt="USARK Silver Member" loading="lazy">
+                            <!-- <p>USARK Silver Member</p> -->
                         </a>
                     </div>
                 </section>
             </div>
         </div>
     </main>
+
+    <!-- Footer -->
     <footer id="footer">
         <div class="footer_inner container">
+            <!-- Columns -->
             <div class="flex media_flex">
                 <div class="column">
                     <p>
@@ -159,6 +221,7 @@
                         <a href="/#social">Follow us</a><br/>
                         <a href="/#about">About</a>
                     </p>
+
                     <a role="button" tabindex="0" onclick="toTop()">Return to top</a>
                 </div>
                 <div class="column">
@@ -182,6 +245,11 @@
                             </a>
                         </div>
                     </p>
+                    <!-- <a href="https://www.morphmarket.com/stores/rcollective/" target="_blank" rel="noopener noreferrer" class="cta button">
+                        <div class="button_inner">
+                            Find us on Morph Market
+                        </div>
+                    </a> -->
                 </div>
                 <div class="column">
                     <p>
@@ -190,6 +258,7 @@
                     </p>
                 </div>
             </div>
+
             <p class="emphasize">© All rights reserved</p>
         </div>
     </footer>
