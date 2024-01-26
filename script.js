@@ -14,36 +14,26 @@ function toTop() {
 
 
 /** Carousel */
-document.querySelectorAll('[data-carousel]').forEach(carousel => {
-    let scrollable = carousel.querySelector(
-        // navigator.userAgent.includes("Firefox") ? ".scrollable" : ".images"
-        ".scrollable"
-    );
-    let images = carousel.querySelector('.images');
-    let allDots = Array.from(carousel.querySelectorAll('.dot'));
-    console.log(allDots);
+document.querySelectorAll('.carousel').forEach(carousel => {
+    const slider = carousel.querySelector('ul');
+    const allDots = Array.from(carousel.querySelectorAll('.dot'));
     let timer;
-
-    /** Window resize event */
-    function setCarouselWidth(element) { element.style.setProperty('--carousel-width', element.offsetWidth+'px'); }
-    window.addEventListener('resize', () => setCarouselWidth(carousel) );
-    setCarouselWidth(carousel);
     
     /** Get current image number (starts at 0) */
     function getIndex() {
-        let width = scrollable.offsetWidth;
-        let pos = scrollable.scrollLeft;
+        let width = carousel.offsetWidth;
+        let pos = slider.scrollLeft;
         let index = Math.round(pos/width);
         return index;
     }
 
     function currentImage() { return carousel.querySelector(`[data-image="${getIndex()}"]`); }
     /** Scroll image container */
-    function imgScroll(x=0) { scrollable.scrollTo({left:x, behavior:'smooth'}); }
+    function goto(x=0) { slider.scrollTo({left:x, behavior:'smooth'}); }
 
     // Scrollable area
-    scrollable.addEventListener('scroll', e => {
-        allDots.forEach(element => element.classList.remove('active'));
+    slider.addEventListener('scroll', e => {
+        for(let d of allDots) d.classList.remove('active');
         allDots[getIndex()].classList.add('active');
         background_image.style = `background: linear-gradient(0deg, rgb(20, 11, 11) 0%, rgba(5, 5, 5, 0.8) 100%), url(${currentImage()?.src ?? 'assets/reptile_egg_incubation.jpg'})`;
         background_image.classList.remove('slidein');
@@ -55,7 +45,7 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
     for(let i in allDots) {
         let element = allDots[i];
         element.addEventListener('click', event => {
-            imgScroll(scrollable.offsetWidth*Number(i));
+            goto(slider.offsetWidth*Number(i));
         })
     }
 
@@ -68,12 +58,12 @@ document.querySelectorAll('[data-carousel]').forEach(carousel => {
 
     /** Cycles to next or previous image */
     function cycleImage(event, auto) {
-        let dir = Number(event?.srcElement.dataset?.direction) || 1;
-        let end = allDots.length * scrollable.offsetWidth - (scrollable.offsetWidth * 1.5);
-        let at_end = scrollable.scrollLeft >= end && dir === 1; // Start over when at the end
-        let at_start = scrollable.scrollLeft === 0 && dir === -1; // Skip to end when at the start
-        let x = at_start ? end : at_end ? 0 : scrollable.scrollLeft + scrollable.offsetWidth*dir;
-        imgScroll(x);
+        let dir = Number(event?.srcElement.dataset?.direction) ?? 1;
+        let end = allDots.length * slider.offsetWidth - slider.offsetWidth;
+        let at_end = slider.scrollLeft >= end && dir === 1; // Start over when at the end
+        let at_start = slider.scrollLeft === 0 && dir === -1; // Skip to end when at the start
+        let x = at_start ? end : at_end ? 0 : slider.scrollLeft + slider.offsetWidth*dir;
+        goto(x);
         if(!auto) setTimer(); // Reset timer
     }
 

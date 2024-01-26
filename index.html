@@ -84,38 +84,40 @@
 
                 <!-- Images -->
                 <div class="column image_col">
-                    <div class="carousel" id="main_carousel" data-carousel data-timer="7000">
+                    <div class="carousel" data-timer="7000">
                         <!-- Images -->
-                        <div class="scrollable">
-                            <div class="images flex">
-                                <!-- Book -->
-                                <div class="item book_container flex justify_center" data-image="0">
-                                    <iframe type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="250" height="418" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B07L7GNDTJ&preview=newtab&linkCode=kpe&hideShare=true" ></iframe>
+                        <ul>
+                            <li>
+                                <div class="book_container flex justify_center" data-image="0">
+                                    <iframe type="text/html" sandbox="allow-scripts allow-same-origin allow-popups" width="245" height="400" frameborder="0" allowfullscreen style="max-width:100%" src="https://read.amazon.com/kp/card?asin=B07L7GNDTJ&preview=newtab&linkCode=kpe&hideShare=true" ></iframe>
                                 </div>
-                                <img src="/img/carousel-item-1.webp" alt="" data-image="1">
-                                <img src="/img/carousel-item-2.webp" alt="" data-image="2">
-                                <img src="/img/carousel-item-3.webp" alt="" data-image="3">
-                                <img src="/img/carousel-item-4.webp" alt="" data-image="4">
-                                <img src="/img/carousel-item-5.webp" alt="" data-image="5">
-                            </div>
-                        </div>
+                            </li>
 
-                        <!-- Buttons -->
-                        <p role="button" tabindex="0" class="arrow prev" data-direction="-1">Previous</p>
-                        <p role="button" tabindex="0" class="arrow next" data-direction="1">Next</p>
-                        <!-- <img src="/assets/arrow.png" alt="Previous image" role="button" tabindex="0" class="arrow prev" data-direction="-1"> -->
-                        <!-- <img src="/assets/arrow.png" alt="Next image" role="button" tabindex="0" class="arrow next" data-direction="1"> -->
+                            <li><img src="/img/carousel-item-1.webp" alt="" data-image="1"></li>
+                            <li><img src="/img/carousel-item-2.webp" alt="" data-image="2"></li>
+                            <li><img src="/img/carousel-item-3.webp" alt="" data-image="3"></li>
+                            <li><img src="/img/carousel-item-4.webp" alt="" data-image="4"></li>
+                            <li><img src="/img/carousel-item-5.webp" alt="" data-image="5"></li>
+                        </ul>
 
-                        <!-- Indicators -->
-                        <div class="indicators flex justify_center">
+                        <!-- Controls -->
+                        <div class="controls flex justify_center">
+                            <p role="button" tabindex="0" class="arrow prev" data-direction="-1">Previous</p>
+
                             <div class="dot active" role="button" tabindex="0"></div>
                             <div class="dot" role="button" tabindex="0"></div>
                             <div class="dot" role="button" tabindex="0"></div>
                             <div class="dot" role="button" tabindex="0"></div>
                             <div class="dot" role="button" tabindex="0"></div>
                             <div class="dot" role="button" tabindex="0"></div>
+
+                            <p role="button" tabindex="0" class="arrow next" data-direction="1">Next</p>
                         </div>
                     </div>
+
+                    <!-- Buttons -->
+                    <!-- <img src="/assets/arrow.png" alt="Previous image" role="button" tabindex="0" class="arrow prev" data-direction="-1"> -->
+                    <!-- <img src="/assets/arrow.png" alt="Next image" role="button" tabindex="0" class="arrow next" data-direction="1"> -->
                 </div>
             </div>
         </div>
